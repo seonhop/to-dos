@@ -30,13 +30,16 @@ const CategoryGrid = styled.div`
 
 const CategoryContainer = styled.div`
 	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
 	span {
 		margin-right: 4px;
 	}
 	button {
 		margin-left: 1rem;
 	}
-	margin: 20px;
+	margin: 20px 0 20px 0;
 `;
 
 const HLine = styled.div`
@@ -69,14 +72,17 @@ function ToDoList() {
 		<Container>
 			<Title>To Do</Title>
 			<CategoryContainer>
-				<span>Category: </span>
-				<select value={category} onInput={onInput}>
-					{categories.map((category) => (
-						<option key={category} value={category}>
-							{category}
-						</option>
-					))}
-				</select>
+				<div>
+					<span>Category: </span>
+					<select value={category} onInput={onInput}>
+						{categories.map((category) => (
+							<option key={category} value={category}>
+								{category}
+							</option>
+						))}
+					</select>
+				</div>
+
 				<button onClick={addNewCategory}>Create New Category</button>
 			</CategoryContainer>
 

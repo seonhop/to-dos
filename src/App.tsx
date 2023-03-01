@@ -70,6 +70,24 @@ const GlobalStyle = createGlobalStyle`
 		display: flex;
 		flex-direction: row;		
 	}
+	button {
+		background-color: ${(props) => props.theme.colorTertiary};
+		border: none;
+		outline: none;
+		color: ${(props) => props.theme.textPrimary};
+		padding: 4px 12px;
+		border-radius: 4px;
+		:disabled {
+			background-color: ${(props) => props.theme.colorBg};
+			color: ${(props) => props.theme.textSecondary};
+
+		}
+		:hover {
+			background-color: ${(props) => props.theme.colorSecondary};
+			cursor: pointer;
+		}
+
+	}
 `;
 
 const ToDoListContainer = styled.div`
