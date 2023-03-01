@@ -72,11 +72,22 @@ const GlobalStyle = createGlobalStyle`
 	}
 `;
 
+const ToDoListContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 2rem;
+	max-width: 50rem;
+	margin: 0 auto;
+`;
+
 function App() {
 	return (
 		<>
 			<GlobalStyle />
-			<ToDoList />
+			<ToDoListContainer>
+				<ToDoList />
+			</ToDoListContainer>
 		</>
 	);
 }
